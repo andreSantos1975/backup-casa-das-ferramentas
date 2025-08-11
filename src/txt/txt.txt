@@ -1,0 +1,3 @@
+  
+  Gerar uma string segredo
+  openssl rand -base64 32  
