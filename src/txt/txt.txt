@@ -1,3 +1,12 @@
   
   Gerar uma string segredo
   openssl rand -base64 32  
+
+ -------------------------------------------------------------------------------------------
+ Para alterar o URL de um repositório remoto (como o do GitHub), o comando é git remote set-url.
+   git remote set-url <nome-do-remoto> <novo-url-do-repositorio>
+
+
+git remote set-url origin git@github.com:Andre709/casa-das-ferramentas.git
+
+---------------------------------------------------------------------------------------------
