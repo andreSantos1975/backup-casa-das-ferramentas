@@ -1,19 +1,18 @@
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #fff;
-    border-bottom: 1px solid #eaeaea;
-    color: #333;
+    background-color: hsl(var(--background));
+    border-bottom: 1px solid hsl(var(--border));
+    color: hsl(var(--foreground));
   }
   
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
-    color: #333;
+    color: hsl(var(--foreground));
   }
   
   .navLinks {
@@ -24,36 +23,38 @@
   
   .welcome {
     font-size: 0.9rem;
-    color: #555;
+    color: hsl(var(--muted-foreground));
   }
   
   .button {
     padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-    color: #333;
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    background-color: hsl(var(--muted));
+    color: hsl(var(--muted-foreground));
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.2s ease;
   }
   
   .button:hover {
-    background-color: #e0e0e0;
+    background-color: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
   }
   
   .buttonPrimary {
     padding: 0.5rem 1rem;
     border: 1px solid transparent;
-    border-radius: 5px;
-    background-color: #0070f3;
-    color: #fff;
+    border-radius: var(--radius);
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.2s ease;
   }
   
   .buttonPrimary:hover {
-    background-color: #005bb5;
+    background-color: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
   }
   

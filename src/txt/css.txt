@@ -1,0 +1,5 @@
+como as variáveis CSS HSL são usadas, deve ser background-color: 
+  hsl(var(--primary)); Este é um padrão comum ao trabalhar com HSL em variáveis CSS, especialmente quando você
+  deseja manipular valores individuais de H, S ou L.
+  Precisa envolver todas as chamadas
+      var(--...) que representam uma cor em hsl(...). com o wrapper hsl() correto.
