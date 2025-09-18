@@ -46,8 +46,12 @@ export default function CadastroPage() {
         router.push('/login') // Redireciona para a página de login personalizada
       }, 2000)
 
-    } catch (err: any) {
-      setError(err.message)
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message)
+      } else {
+        setError('Ocorreu um erro desconhecido.')
+      }
     } finally {
       setIsLoading(false)
     }
