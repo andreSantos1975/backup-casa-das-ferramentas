@@ -43,6 +43,8 @@ All colors MUST be HSL.
 
   --radius: 0.5rem;
 
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
   --sidebar-background: 0 0% 98%;
   --sidebar-foreground: 240 5.3% 26.1%;
   --sidebar-primary: 240 5.9% 10%;
@@ -96,8 +98,8 @@ All colors MUST be HSL.
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
 }
 
 #root {
