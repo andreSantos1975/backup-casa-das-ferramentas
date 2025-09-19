@@ -2,14 +2,13 @@
 
 .heroSection {
   position: relative;
-  height: 500px;
+  min-height: 500px; /* Usar min-height em vez de height fixo */
   overflow: hidden;
-  padding-top: 100px; /* Adicionar padding para compensar o header */
 }
 
 @media (min-width: 768px) {
   .heroSection {
-    height: 600px;
+    min-height: 600px; /* Usar min-height em vez de height fixo */
   }
 }
 
@@ -37,12 +36,14 @@
   padding-right: 1rem; /* px-4 */
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Alterado de center para flex-start */
 }
 
 .textContainer {
   color: white;
   max-width: 48rem; /* max-w-2xl */
+  padding-top: 8rem; /* Aumentar padding-top para empurrar o texto para baixo do header */
+  padding-bottom: 4rem; /* Adicionar padding-bottom para garantir espaço na parte inferior */
 }
 
 .title {
