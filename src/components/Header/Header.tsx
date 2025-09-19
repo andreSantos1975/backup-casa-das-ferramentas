@@ -31,6 +31,25 @@ const Header = () => {
       {/* Main Header */}
       <div className={styles.mainHeader}>
         <div className={styles.mainHeaderContent}>
+          {/* Logo */}
+          <div className={styles.logoContainer}>
+            <Link href="/" className={styles.logo}>
+              CASA DAS FERRAMENTAS
+            </Link>
+          </div>
+
+          {/* Search Bar - Desktop */}
+          <div className={styles.searchBarDesktop}>
+            <div className={styles.searchInputContainer}>
+              <input 
+                type="search" 
+                placeholder="Search for tools, materials..."
+                className={styles.input}
+              />
+              <Search className={styles.searchIcon} />
+            </div>
+          </div>
+
           {/* Right Actions */}
           <div className={styles.rightActions}>
             {session ? (
@@ -65,25 +84,6 @@ const Header = () => {
             >
               <Menu className={styles.buttonIcon} />
             </button>
-          </div>
-
-          {/* Logo */}
-          <div className={styles.logoContainer}>
-            <Link href="/" className={styles.logo}>
-              CASA DAS FERRAMENTAS
-            </Link>
-          </div>
-
-          {/* Search Bar - Desktop */}
-          <div className={styles.searchBarDesktop}>
-            <div className={styles.searchInputContainer}>
-              <input 
-                type="search" 
-                placeholder="Search for tools, materials..."
-                className={styles.input}
-              />
-              <Search className={styles.searchIcon} />
-            </div>
           </div>
         </div>
 
