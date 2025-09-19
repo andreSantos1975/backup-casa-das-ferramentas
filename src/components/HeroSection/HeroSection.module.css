@@ -4,6 +4,7 @@
   position: relative;
   height: 500px;
   overflow: hidden;
+  padding-top: 100px; /* Adicionar padding para compensar o header */
 }
 
 @media (min-width: 768px) {

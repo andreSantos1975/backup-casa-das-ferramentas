@@ -2,6 +2,9 @@
   background-color: hsl(var(--background));
   border-bottom: 1px solid hsl(var(--border));
   box-shadow: var(--shadow-sm);
+  position: sticky; /* Adicionar sticky para que ele fique no topo ao rolar */
+  top: 0; /* Fixar no topo */
+  z-index: 100; /* Garantir que ele esteja acima de outros elementos */
 }
 
 .topBar {
