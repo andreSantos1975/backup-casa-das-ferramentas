@@ -1,0 +1,302 @@
+/* src/components/ProductGrid/ProductGrid.module.css */
+
+.productGridSection {
+  padding-top: 4rem; /* py-16 */
+  padding-bottom: 4rem; /* py-16 */
+  background-color: hsl(var(--background));
+}
+
+.container {
+  max-width: 1280px; /* max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+}
+
+.headerSection {
+  text-align: center;
+  margin-bottom: 3rem; /* mb-12 */
+}
+
+.title {
+  font-size: 1.875rem; /* text-3xl */
+  line-height: 2.25rem; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  color: hsl(var(--foreground));
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.25rem; /* md:text-4xl */
+    line-height: 2.5rem; /* md:text-4xl */
+  }
+}
+
+.description {
+  color: hsl(var(--muted-foreground));
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem; /* text-lg */
+  max-width: 42rem; /* max-w-2xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr)); /* grid-cols-1 */
+  gap: 1.5rem; /* gap-6 */
+}
+
+@media (min-width: 640px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* sm:grid-cols-2 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* lg:grid-cols-3 */
+  }
+}
+
+/* Card Component */
+.card {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-sm); /* hover:shadow-lg (using a defined shadow variable) */
+}
+
+.cardContent {
+  padding: 1rem; /* p-4 */
+}
+
+.cardFooter {
+  padding: 1rem; /* p-4 */
+  padding-top: 0; /* pt-0 */
+}
+
+/* Product Image and Badges */
+.imageWrapper {
+  position: relative;
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.productImage {
+  width: 100%;
+  height: 12rem; /* h-48 */
+  object-fit: cover;
+  border-radius: var(--radius);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .productImage {
+  transform: scale(1.05); /* group-hover:scale-105 */
+}
+
+.badgeContainer {
+  position: absolute;
+  top: 0.5rem; /* top-2 */
+  left: 0.5rem; /* left-2 */
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* gap-1 */
+}
+
+/* Badge Component */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px; /* full rounded */
+  font-size: 0.75rem; /* text-xs */
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.badgeOutline {
+  composes: badge;
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+  background-color: transparent;
+}
+
+.badgeSuccess {
+  composes: badge;
+  background-color: hsl(var(--success));
+  color: hsl(var(--success-foreground));
+}
+
+.badgeSale {
+  composes: badge;
+  background-color: hsl(var(--sale));
+  color: white;
+}
+
+.outOfStockOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* bg-black/60 */
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badgeDestructive {
+  composes: badge;
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+/* Product Info */
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* space-y-2 */
+}
+
+.productName {
+  font-weight: 600; /* font-semibold */
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem; /* text-lg */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* line-clamp-2 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem; /* space-x-1 */
+}
+
+.starFilled {
+  height: 1rem; /* h-4 */
+  width: 1rem; /* w-4 */
+  color: #fbbf24; /* text-yellow-400 */
+  fill: currentColor; /* fill-current */
+}
+
+.starEmpty {
+  height: 1rem; /* h-4 */
+  width: 1rem; /* w-4 */
+  color: #d1d5db; /* text-gray-300 */
+}
+
+.reviewText {
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem; /* text-sm */
+  color: hsl(var(--muted-foreground));
+}
+
+.priceContainer {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem; /* space-x-2 */
+}
+
+.currentPrice {
+  font-size: 1.25rem; /* text-xl */
+  line-height: 1.75rem; /* text-xl */
+  font-weight: 700; /* font-bold */
+  color: hsl(var(--price));
+}
+
+.originalPrice {
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem; /* text-sm */
+  color: hsl(var(--muted-foreground));
+  text-decoration: line-through;
+}
+
+/* Button Component (reusing from HeroSection, but with more variants) */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.buttonDefault {
+  composes: button;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.buttonDefault:hover {
+  background-color: hsl(var(--accent));
+}
+
+.buttonOutline {
+  composes: button;
+  background-color: transparent;
+  border-color: hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+.buttonOutline:hover {
+  background-color: hsl(var(--muted));
+}
+
+.buttonGhost {
+  composes: button;
+  background-color: transparent;
+  color: hsl(var(--foreground));
+}
+
+.buttonGhost:hover {
+  background-color: hsl(var(--muted));
+}
+
+.buttonSm {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.buttonLg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.buttonFullWidth {
+  width: 100%;
+}
+
+.viewAllContainer {
+  text-align: center;
+  margin-top: 3rem; /* mt-12 */
+}
+
+.buttonLargePadding {
+  padding-left: 2rem; /* px-8 */
+  padding-right: 2rem; /* px-8 */
+}
+
+/* Wishlist Button */
+.wishlistButton {
+  position: absolute;
+  top: 0.5rem; /* top-2 */
+  right: 0.5rem; /* right-2 */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .wishlistButton {
+  opacity: 1; /* group-hover:opacity-100 */
+}
