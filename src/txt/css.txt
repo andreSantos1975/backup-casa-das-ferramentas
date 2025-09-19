@@ -1,5 +1,11 @@
 como as variáveis CSS HSL são usadas, deve ser background-color: 
-  hsl(var(--primary)); Este é um padrão comum ao trabalhar com HSL em variáveis CSS, especialmente quando você
+  hsl(var(--primary)); Este é um padrão comum ao trabalhar com HSL em variáveis CSS, 
+  especialmente quando você
   deseja manipular valores individuais de H, S ou L.
   Precisa envolver todas as chamadas
       var(--...) que representam uma cor em hsl(...). com o wrapper hsl() correto.
+      ✦ A técnica HSL (Hue, Saturation, Lightness) é utilizada no projeto para definir cores via
+  variáveis CSS em src/app/globals.css. As cores são declaradas como variáveis HSL (ex:
+  --primary: 18 95% 55%;) e acessadas no CSS com hsl(var(--primary)). As vantagens incluem
+  consistência, fácil manutenção, suporte a temas (dark mode) e ajuste simples de opacidade com
+  hsla(). Em suma, é um sistema de cores flexível e eficiente.

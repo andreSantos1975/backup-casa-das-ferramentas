@@ -4,14 +4,6 @@
   box-shadow: var(--shadow-sm);
 }
 
-@media (min-width: 768px) {
-  .header {
-    position: sticky; /* Adicionar sticky para que ele fique no topo ao rolar */
-    top: 0; /* Fixar no topo */
-    z-index: 100; /* Garantir que ele esteja acima de outros elementos */
-  }
-}
-
 .topBar {
   background-color: hsl(var(--primary));
   color: hsl(var(--primary-foreground));

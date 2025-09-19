@@ -1,0 +1,290 @@
+/* src/components/Footer/Footer.module.css */
+
+.footer {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+/* Newsletter Section */
+.newsletterSection {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  padding-top: 3rem; /* py-12 */
+  padding-bottom: 3rem; /* py-12 */
+}
+
+.newsletterContent {
+  max-width: 1280px; /* max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  text-align: center;
+}
+
+.newsletterTitle {
+  font-size: 1.5rem; /* text-2xl */
+  line-height: 2rem; /* text-2xl */
+  font-weight: 700; /* font-bold */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.newsletterDescription {
+  margin-bottom: 1.5rem; /* mb-6 */
+  color: hsla(var(--primary-foreground), 0.9); /* text-primary-foreground/90 */
+}
+
+.newsletterForm {
+  max-width: 28rem; /* max-w-md */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 0.5rem; /* gap-2 */
+}
+
+/* Input Component */
+.input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  width: 100%;
+  background-color: white; /* bg-white */
+  color: hsl(var(--foreground)); /* text-foreground */
+}
+
+/* Button Component (reusing from ProductGrid, but adding link variant) */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.buttonDefault {
+  composes: button;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.buttonDefault:hover {
+  background-color: hsl(var(--accent));
+}
+
+.buttonOutline {
+  composes: button;
+  background-color: transparent;
+  border-color: hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+.buttonOutline:hover {
+  background-color: hsl(var(--muted));
+}
+
+.buttonGhost {
+  composes: button;
+  background-color: transparent;
+  color: hsl(var(--foreground));
+}
+
+.buttonGhost:hover {
+  background-color: hsl(var(--muted));
+}
+
+.buttonLink {
+  composes: button;
+  padding: 0;
+  height: auto;
+  background-color: transparent;
+  border-color: transparent;
+  color: hsl(var(--muted-foreground));
+  text-decoration: none;
+}
+
+.buttonLink:hover {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+}
+
+.buttonSubscribe {
+  composes: button;
+  background-color: white; /* bg-white */
+  color: hsl(var(--primary)); /* text-primary */
+}
+
+.buttonSubscribe:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* hover:bg-white/90 */
+}
+
+/* Main Footer Content */
+.mainFooterContentWrapper {
+  padding-top: 3rem; /* py-12 */
+  padding-bottom: 3rem; /* py-12 */
+}
+
+.mainFooterContent {
+  max-width: 1280px; /* max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr)); /* grid-cols-1 */
+  gap: 2rem; /* gap-8 */
+}
+
+@media (min-width: 768px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* lg:grid-cols-4 */
+  }
+}
+
+.companyTitle {
+  font-size: 1.25rem; /* text-xl */
+  line-height: 1.75rem; /* text-xl */
+  font-weight: 700; /* font-bold */
+  color: hsl(var(--primary));
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.companyDescription {
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* space-y-3 */
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* space-x-3 */
+}
+
+.contactItem > span {
+  word-break: break-word;
+}
+
+.contactItem:nth-child(3) { /* MapPin item */
+  align-items: flex-start;
+}
+
+.iconPrimary {
+  height: 1rem; /* h-4 */
+  width: 1rem; /* w-4 */
+  color: hsl(var(--primary));
+}
+
+.linkTitle {
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* space-y-2 */
+}
+
+.serviceFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* space-y-3 */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.serviceText {
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem; /* text-sm */
+}
+
+.socialTitle {
+  font-weight: 500; /* font-medium */
+  margin-bottom: 0.75rem; /* mb-3 */
+}
+
+.socialLinks {
+  display: flex;
+  gap: 0.75rem; /* space-x-3 */
+}
+
+.socialButton {
+  composes: button;
+  padding: 0.5rem; /* p-2 */
+  height: auto;
+  width: auto;
+  border-color: hsl(var(--border));
+  background-color: transparent;
+  color: hsl(var(--foreground));
+}
+
+.socialButton:hover {
+  background-color: hsl(var(--muted));
+}
+
+/* Separator Component */
+.separator {
+  background-color: hsl(var(--border));
+  height: 1px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px; /* max-w-7xl */
+}
+
+/* Bottom Footer */
+.bottomFooter {
+  padding-top: 1.5rem; /* py-6 */
+  padding-bottom: 1.5rem; /* py-6 */
+}
+
+.bottomFooterContent {
+  max-width: 1280px; /* max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem; /* space-y-4 */
+}
+
+@media (min-width: 768px) {
+  .bottomFooterContent {
+    flex-direction: row; /* md:flex-row */
+    gap: 0; /* md:space-y-0 */
+  }
+}
+
+.copyright {
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem; /* text-sm */
+  color: hsl(var(--muted-foreground));
+}
+
+.policyLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* gap-4 */
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem; /* text-sm */
+}

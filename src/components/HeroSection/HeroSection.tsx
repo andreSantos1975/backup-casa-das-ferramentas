@@ -47,10 +47,10 @@ const HeroSection = () => {
             CASA DAS FERRAMENTAS
           </h1>
           <p className={styles.subtitle1}>
-            Everything for your business, field, and home
+            Tudo para seu negócio, campo e casa
           </p>
           <p className={styles.subtitle2}>
-            Professional tools, construction materials, and agricultural supplies with the best prices and quality.
+            Ferramentas profissionais, materiais de construção e suprimentos agrícolas com os melhores preços e qualidade.
           </p>
           
           <div className={styles.buttonGroup}>
@@ -59,21 +59,21 @@ const HeroSection = () => {
               onClick={openWhatsApp}
             >
               <MessageCircle className="mr-2 h-5 w-5" />
-              Contact us on WhatsApp
+              Fale conosco pelo WhatsApp
             </Button>
             <Button 
               variant="outline" 
             >
-              View Catalog
+              Ver Catálogo
             </Button>
           </div>
 
           {/* Special Offers Banner */}
           <div className={styles.offersBanner}>
             <div className={styles.offersContent}>
-              <span className={styles.offerTextOrange}> Special Offers:</span>
-              <span className={styles.offerTextWhite}>Up to 30% OFF on power tools</span>
-              <span className={styles.offerTextOrange2}>Free shipping over R$ 200</span>
+              <span className={styles.offerTextOrange}> Ofertas Especiais:</span>
+              <span className={styles.offerTextWhite}>Até 30% OFF em ferramentas elétricas</span>
+              <span className={styles.offerTextOrange2}>Frete grátis acima de R$ 200</span>
             </div>
           </div>
         </div>

@@ -90,67 +90,67 @@ const ProductGrid = () => {
   const featuredProducts: Product[] = [
     {
       id: 1,
-      name: "Professional Drill Kit",
+      name: "Kit de Furadeira Profissional",
       price: 299.99,
       originalPrice: 399.99,
       image: "https://res.cloudinary.com/dcgv5p6xe/image/upload/v1757434610/furadeira3_d6uthj.png",
       rating: 4.8,
       reviews: 124,
-      category: "Tools",
+      category: "Ferramentas",
       inStock: true,
       isOnSale: true,
     },
     {
       id: 2,
-      name: "Heavy Duty Hammer",
+      name: "Martelo de Alta Resistência",
       price: 45.99,
       image: "https://res.cloudinary.com/dcgv5p6xe/image/upload/v1757434610/furadeira2_rmuysz.png",
       rating: 4.9,
       reviews: 89,
-      category: "Tools",
+      category: "Ferramentas",
       inStock: true,
       isNew: true,
     },
     {
       id: 3,
-      name: "Complete Tool Set",
+      name: "Conjunto Completo de Ferramentas",
       price: 199.99,
       originalPrice: 249.99,
       image: "https://res.cloudinary.com/dcgv5p6xe/image/upload/v1757434261/furadeira_fxdknh.png",
       rating: 4.7,
       reviews: 156,
-      category: "Tools",
+      category: "Ferramentas",
       inStock: true,
       isOnSale: true,
     },
     {
       id: 4,
-      name: "Professional Drill Kit",
+      name: "Kit de Furadeira Profissional",
       price: 299.99,
       image: "https://res.cloudinary.com/dcgv5p6xe/image/upload/v1757434610/furadeira3_d6uthj.png", // Repetir
       rating: 4.8,
       reviews: 124,
-      category: "Tools",
+      category: "Ferramentas",
       inStock: true,
     },
     {
       id: 5,
-      name: "Heavy Duty Hammer",
+      name: "Martelo de Alta Resistência",
       price: 45.99,
       image: "https://res.cloudinary.com/dcgv5p6xe/image/upload/v1757434610/furadeira2_rmuysz.png", // Repetir
       rating: 4.9,
       reviews: 89,
-      category: "Tools",
+      category: "Ferramentas",
       inStock: false,
     },
     {
       id: 6,
-      name: "Complete Tool Set",
+      name: "Conjunto Completo de Ferramentas",
       price: 199.99,
       image: "https://res.cloudinary.com/dcgv5p6xe/image/upload/v1757434261/furadeira_fxdknh.png", // Repetir
       rating: 4.7,
       reviews: 156,
-      category: "Tools",
+      category: "Ferramentas",
       inStock: true,
       isNew: true,
     },
@@ -168,10 +168,10 @@ const ProductGrid = () => {
       <div className={styles.container}>
         <div className={styles.headerSection}>
           <h2 className={styles.title}>
-            Featured Products
+            Produtos em Destaque
           </h2>
           <p className={styles.description}>
-            Discover our most popular tools and equipment, carefully selected for quality and value.
+            Descubra nossas ferramentas e equipamentos mais populares, cuidadosamente selecionados por qualidade e valor.
           </p>
         </div>
 
@@ -191,10 +191,10 @@ const ProductGrid = () => {
                   {/* Badges */}
                   <div className={styles.badgeContainer}>
                     {product.isNew && (
-                      <Badge variant="success">New</Badge>
+                      <Badge variant="success">Novo</Badge>
                     )}
                     {product.isOnSale && (
-                      <Badge variant="sale">Sale</Badge>
+                      <Badge variant="sale">Promoção</Badge>
                     )}
                   </div>
 
@@ -211,7 +211,7 @@ const ProductGrid = () => {
                   {!product.inStock && (
                     <div className={styles.outOfStockOverlay}>
                       <Badge variant="destructive">
-                        Out of Stock
+                        Fora de Estoque
                       </Badge>
                     </div>
                   )}
@@ -266,7 +266,7 @@ const ProductGrid = () => {
                   variant={product.inStock ? "default" : "outline"}
                 >
                   <ShoppingCart className="mr-2 h-4 w-4" />
-                  {product.inStock ? "Add to Cart" : "Notify When Available"}
+                  {product.inStock ? "Adicionar ao Carrinho" : "Notificar Quando Disponível"}
                 </Button>
               </CardFooter>
             </Card>
@@ -275,7 +275,7 @@ const ProductGrid = () => {
 
         <div className={styles.viewAllContainer}>
           <Button variant="outline" size="lg" className={styles.buttonLargePadding}>
-            View All Products
+            Ver Todos os Produtos
           </Button>
         </div>
       </div>

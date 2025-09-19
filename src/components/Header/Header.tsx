@@ -43,7 +43,7 @@ const Header = () => {
             <div className={styles.searchInputContainer}>
               <input 
                 type="search" 
-                placeholder="Search for tools, materials..."
+                placeholder="Buscar ferramentas, materiais..."
                 className={styles.input}
               />
               <Search className={styles.searchIcon} />
@@ -92,7 +92,7 @@ const Header = () => {
           <div className={styles.searchInputContainer}>
             <input 
               type="search" 
-              placeholder="Search for tools, materials..."
+              placeholder="Buscar ferramentas, materiais..."
               className={styles.input}
             />
             <Search className={styles.searchIcon} />
