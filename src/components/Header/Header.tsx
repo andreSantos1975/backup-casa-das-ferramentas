@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image"; // Importar Image
 import { Menu, Search, ShoppingCart, User } from "lucide-react";
 import { useState } from "react";
 import styles from "./Header.module.css";
@@ -34,7 +35,13 @@ const Header = () => {
           {/* Logo */}
           <div className={styles.logoContainer}>
             <Link href="/" className={styles.logo}>
-              CASA DAS FERRAMENTAS
+              <Image
+                src="https://res.cloudinary.com/dcgv5p6xe/image/upload/v1757802855/logo_ij04do.svg"
+                alt="CASA DAS FERRAMENTAS Logo"
+                width={100}
+                height={40}
+                priority
+              />
             </Link>
           </div>
 

@@ -163,13 +163,7 @@
 }
 
 .desktopButton {
-  display: inline-flex;
-}
-
-@media (max-width: 767px) {
-  .desktopButton {
-    display: none;
-  }
+  display: inline-flex; /* Manter visível em todas as telas */
 }
 
 .buttonIcon {
