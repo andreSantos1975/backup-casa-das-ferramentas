@@ -94,7 +94,13 @@ All colors MUST be HSL.
 }
 
 * {
+  box-sizing: border-box;
   border-color: var(--border);
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {

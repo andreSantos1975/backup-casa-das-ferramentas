@@ -54,7 +54,9 @@ const Header = () => {
           <div className={styles.rightActions}>
             {session ? (
               <>
-                <span className={`${styles.welcome} ${styles.desktopButton}`}>Bem-vindo, {session.user?.name || 'Usuário'}!</span>
+                <span className={`${styles.welcome}`}>
+                  <span className={styles.desktopButton}>Bem-vindo, {session.user?.name || 'Usuário'}!</span>
+                </span>
                 <button onClick={() => signOut()} className={`${styles.button} ${styles.ghost} ${styles.desktopButton}`}>
                   Sair
                 </button>
