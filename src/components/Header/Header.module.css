@@ -273,3 +273,20 @@
   width: 100%;
   justify-content: flex-start;
 }
+
+/* Flexbox ordering fix for header icons */
+.logoContainer {
+  order: 1;
+}
+.rightActions {
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .searchBarDesktop {
+    order: 2;
+  }
+  .rightActions {
+    order: 3;
+  }
+}
