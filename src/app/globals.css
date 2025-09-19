@@ -27,6 +27,7 @@ All colors MUST be HSL.
 
   /* WhatsApp Integration */
   --whatsapp: 142 70% 49%; /* WhatsApp Green */
+  --whatsapp-dark: 142 70% 36%; /* Darker WhatsApp Green for hover */
   --whatsapp-foreground: 0 0% 100%;
 
   /* E-commerce specific colors */

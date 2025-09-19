@@ -1,0 +1,54 @@
+/* src/components/WhatsAppButton/WhatsAppButton.module.css */
+
+.whatsappButtonContainer {
+  position: fixed;
+  bottom: 1.5rem; /* equivalent to Tailwind's bottom-6 */
+  right: 1.5rem;  /* equivalent to Tailwind's right-6 */
+  z-index: 50;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.whatsappButtonContainer.hidden {
+  opacity: 0;
+  transform: translateY(1rem); /* Move down slightly when hidden */
+  pointer-events: none; /* Disable interactions when hidden */
+}
+
+.whatsappButton {
+  background-color: hsl(var(--whatsapp));
+  color: hsl(var(--whatsapp-foreground));
+  border-radius: 9999px; /* full rounded */
+  width: 3.5rem; /* equivalent to Tailwind's w-14 */
+  height: 3.5rem; /* equivalent to Tailwind's h-14 */
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* equivalent to shadow-lg */
+  transition: background-color 300ms ease-in-out, box-shadow 300ms ease-in-out, transform 100ms ease-in-out;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.whatsappButton:hover {
+  background-color: hsl(var(--whatsapp-dark)); /* equivalent to hover:bg-whatsapp/90 */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* equivalent to hover:shadow-xl */
+  animation: none; /* Disable pulse on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.icon {
+  width: 1.5rem; /* equivalent to Tailwind's w-6 */
+  height: 1.5rem; /* equivalent to Tailwind's h-6 */
+  color: currentColor; /* Ensures icon color matches text color */
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
