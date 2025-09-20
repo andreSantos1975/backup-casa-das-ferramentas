@@ -1,7 +1,7 @@
 // src/app/products/[id]/page.tsx
 import { getProductById } from "@/data/products";
 import Image from "next/image";
-import Link from "next/link";
+
 import { notFound } from "next/navigation";
 import { Star, ShoppingCart } from "lucide-react";
 import styles from "./product.module.css";
