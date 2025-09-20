@@ -300,3 +300,9 @@
 .card:hover .wishlistButton {
   opacity: 1; /* group-hover:opacity-100 */
 }
+
+.productLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
